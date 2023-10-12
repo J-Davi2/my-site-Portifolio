@@ -1,0 +1,553 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #0b041f;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.interface {
+    max-width: 1280vh;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.titulos {
+    color: #a8a6a6;
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 40px;
+}
+
+.titulos span{
+    color: #e0448a;
+}
+
+.style {
+    color: #e0448a;
+    transition: .5s;
+}
+
+.style:hover{
+    color: #fff;
+}
+
+.style1{
+    color: #e0448a;
+}
+
+/* Estilo cabeçalho */
+
+header {
+    padding: 40px 4%;
+
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav.menu-desktop a{
+    color: #a8a6a6;
+    text-decoration: none;
+    transition: 0.5s;
+    
+}
+header nav.menu-desktop a:hover{
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.Logo{
+    display: flex;
+}
+
+.Logo p{
+    margin: 15px 15px 15px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.logo{
+    border-radius: 15px;
+}
+
+.menu-desktop {
+    margin-right: 50px;
+}
+
+header nav.menu-desktop ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding-left: 60px;
+}
+
+.btn-contato button{
+    padding: 10px 20px;
+    margin-right: 200px;
+    background-color: #e0448a;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.btn-contato button:hover{
+    background-color: #fff; 
+    color: #e0448a;
+    border: 2px solid #e0448a;
+}
+
+
+/* Estilo menu mobile */
+
+.abrir-menu i{
+    color: #e0448a;
+    font-size: 40px;
+}
+
+.abrir-menu{
+    display: none;
+}
+
+
+.mobile-menu {
+    padding-top: 20px;
+    background: linear-gradient(to right, #645d75, #432d74);
+    height: 100vh;
+    width: 0%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.mobile-menu.abrir-menu{
+    width: 70%;
+}
+
+.mobile-menu.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+.mobile-menu btn-fechar{
+    padding: 40px 8%;
+}
+
+.mobile-menu .btn-fechar .bi-x-circle{
+    color: #e0448a;
+    font-size: 35px;
+    padding: 0 30px;
+}
+
+.mobile-menu nav ul{
+    text-align: right;
+}
+
+.mobile-menu nav ul li a{
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: 300;
+    padding: 30px 10%;
+    display: block;
+    transition: .5s;
+}
+
+.mobile-menu nav ul li a:hover{
+    background-color: #a8a6a6;
+
+}
+
+.overlay-menu{
+    background-color: #000000b7;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8888;
+    display: none;
+}
+
+/* Topo do site principal */
+
+.topo-site {
+    padding: 40px 10%;
+}
+
+.topo-site .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.topo-site h1{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.texto-topo h2{
+    color: #e2dede;
+    font-family: monospace;
+    font-size: 40px;
+    line-height: 40px
+}
+
+.texto-topo p{
+    color: #afa9a9;
+    font-size: 20px;
+    margin: 40px 0;
+}
+
+.img-topo img{
+    width: 250px;
+    border-radius: 40px;
+}
+
+/* Seção sobre */
+
+.sobre-section {
+    background-color: #211b2e;
+    padding: 60px 0;
+    align-items: center; 
+    justify-content: center; 
+    box-shadow: 0 0 30px #ffffff65;
+}
+
+.sobre-section .flex{
+    width: 100%;
+    padding: 20px 4%;
+    gap: 80px;
+}
+
+.sobre-txt{
+    text-align: justify;
+}
+
+.sobre-txt h2 {
+    color: #a8a6a6;
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.sobre-txt h2 span{
+    color: #e0448a;
+}
+
+.sobre-txt p {
+    color: #afa9a9;
+    margin: 15px 0;
+}
+
+.ponto {
+    color: #e0448a;
+}
+
+.social-redes a button{
+    color: #fff;
+    background-color: #e0448a;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    font-size: 18px;
+    margin: 5px 3px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.social-redes a button:hover{
+    background:  #fff;
+    color: #e0448a;
+    border: 1px solid #e0448a;
+}
+
+.img-sobre img{
+    border-radius: 25px 5px;
+    box-shadow: 0 0 20px #040307;
+}
+
+
+/* seção de portifolio */
+
+.projetos-section{
+    padding: 80px 4%;
+    box-shadow: 0 0 30px #ffffff65;
+}
+
+.projetos-section .flex {
+    justify-content: space-around;
+}
+
+
+.projeto {
+    width: 400px;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px #a8a6a6b9;
+    margin-top: 80px;
+    position: relative;
+}
+
+.explicativo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0b041fbd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: .5s;
+}
+
+.explicativo:hover{
+    opacity: 1;
+}
+.explicativo h3{
+    font-size: 25px;
+    color: #ffffff;
+}
+
+/* Estilo da seção contato */
+
+section.contato {
+    padding: 80px 4%;
+    background-color: #211b2e;
+    box-shadow: 0 0 30px #ffffff65;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    background-color: #170d30fd;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+form textarea{
+    resize: none;
+    max-height: 150px;
+}
+
+form .btn-enviar{
+    width: 100px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 15px;
+    
+     
+}
+
+form .btn-enviar input{
+    color: #fff;
+    background-color: #e0448a;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+form .btn-enviar input:hover{
+    color: #e0448a;
+    background-color: #fff;
+}
+
+/* Rodapé */
+
+footer {
+    padding: 40px 4%;
+    box-shadow: 0 0 1px #ffffff65;
+    
+}
+
+.rodapé .flex{
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-bottom: 2px solid #e0448a;
+    padding-bottom: 15px;
+}
+
+.rodapé .flex p a {
+    color: #a8a6a6;
+    font-size: 20px;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.rodapé .flex p a:hover{
+    text-decoration: underline;
+    color: #fff;
+}
+
+.rodapé p i {
+    color: #e0448a;
+}
+
+
+/* responsividade */
+
+@media screen and (max-width: 1020px){
+
+    /* geral */
+    .flex{
+        flex-direction: column;
+    }
+
+    /* Ajustes Finos */
+
+    .abrir-menu{
+        display: block;
+    }
+
+    .menu-desktop{
+        display: none;
+    } 
+
+    /* Topo site */
+
+    .topo-site .flex {
+        gap: 50px;   
+    }
+
+    .topo-site p{
+        font-size: 15px;
+    }
+
+    .topo-site .flex{
+        flex-direction: column-reverse;
+    }
+
+    /* sobre */
+
+    .sobre-section .flex {
+        text-align: center;
+        display: block;
+    }
+
+    .sobre-txt h2 {
+        display: block;
+        text-align: center;
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .sobre-txt p{
+        font-size: 15px;
+    }
+
+    .social-redes {
+        display: block;
+        text-align: center;
+    }
+
+    .sobre-section .flex img {
+        padding-bottom: 30px;
+    }
+
+    /* projetos */
+
+    .projetos-section .flex{
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* rodapé */
+
+    .rodapé .flex{
+        display: block;
+        flex-direction: column;
+        border-bottom: none;
+    }
+
+    .rodapé .flex img,
+    .rodapé .flex p {
+        padding-bottom: 15px;
+    }
+
+    .rodapé .flex p {
+        border-bottom: 1px solid #e0448a;
+    }
+
+    .rodapé .flex p a{
+        font-size: 15px;
+    }
+
+    .rodapé .flex .social-redes {
+        padding-top: 10px;
+    }
+
+    .rodapé .flex .social-redes a button{
+        width: 40px;
+        height: 40px;
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (max-width: 500px){ 
+
+    .abrir-menu{
+        display: block;
+    }
+
+    .topo-site{
+        padding-top: 15px;
+    }
+
+    .topo-site h1 {
+        margin-bottom: 15px;
+    }
+
+    .topo-site h2{
+        font-size: 30px;
+    }
+
+    .topo-site p {
+        margin: 15px 0;
+        font-size: 13px;
+    }
+
+    .projeto {
+        width: 350px;
+        height: 200px;
+    }
+
+    .img-sobre{
+        padding-bottom: 25px;
+    }
+}
