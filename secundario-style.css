@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #0b041f;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.interface {
+    max-width: 1280vh;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+
+.style {
+    color: #e0448a;
+    transition: .5s;
+}
+
+.style:hover{
+    color: #fff;
+}
+
+.style1{
+    color: #e0448a;
+}
+
+/* Estilo cabeçalho */
+
+header {
+    padding: 40px 4%;
+
+}
+
+header nav ul li button{
+    width: 100px;
+    height: 40px;
+    background-color: #e0448a;
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: 15px;
+    border-radius: 30px 15px;
+    transition: .5s;
+}
+
+header nav ul li button:hover{
+    background-color: #fff;
+    color: #e0448a;
+    border: 1px solid #e0448a;
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Logo{
+    display: flex;
+}
+
+.Logo p{
+    margin: 15px 15px 15px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.logo{
+    border-radius: 15px;
+}
+
+/* Main-section */
+
+.main {
+    height: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+.main h1,
+.main p{
+    padding-top: 15px;
+}
+
+.main h1{
+    color: #e0448a;
+    font-size: 40px;
+}
+
+.main p {
+    color: #a8a6a6;
+    font-size: 20px;
+}
+
+/* Social redes */
+
+.social-redes a button{
+    color: #fff;
+    background-color: #e0448a;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    font-size: 18px;
+    margin: 5px 3px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.social-redes a button:hover{
+    background:  #fff;
+    color: #e0448a;
+    border: 1px solid #e0448a;
+}
+
+/* Rodapé */
+
+footer {
+    padding: 40px 4%;
+    box-shadow: 0 0 1px #ffffff65;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+}
+
+.rodapé .flex{
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-bottom: 2px solid #e0448a;
+    padding-bottom: 15px;
+}
+
+.rodapé .flex p a {
+    color: #a8a6a6;
+    font-size: 20px;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.rodapé .flex p a:hover{
+    text-decoration: underline;
+    color: #fff;
+}
+
+.rodapé p i {
+    color: #e0448a;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 450px){
+        
+    /*Ajustes finos*/
+
+    .main {
+        margin: 40px 10%;
+    }
+    
+    .main h1,
+    .main p{
+        padding-top: 20px;
+    }
+    
+    .main h1{
+        font-size: 30px;
+    }
+    
+    .main p {
+        color: #a8a6a6;
+        font-size: 20px;
+    }
+    
+    
+    
+    /* rodapé */
+    .rodapé .flex{
+        display: block;
+        flex-direction: column;
+        border-bottom: none;
+    }
+
+    .rodapé .flex img,
+    .rodapé .flex p {
+        padding-bottom: 15px;
+    }
+
+    .rodapé .flex p {
+        border-bottom: 1px solid #e0448a;
+    }
+
+    .rodapé .flex p a{
+        font-size: 20px;
+    }
+
+    .rodapé .flex .social-redes {
+        padding-top: 10px;
+    }
+
+    .rodapé .flex .social-redes a button{
+        width: 40px;
+        height: 40px;
+        font-size: 15px;
+    }
+}
