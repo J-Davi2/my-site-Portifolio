@@ -218,8 +218,15 @@ header nav.menu-desktop ul li{
 }
 
 .img-topo img{
-    width: 250px;
     border-radius: 40px;
+    animation: 
+        exemple 3s infinite ease-in-out;
+}
+
+@keyframes exemple {
+    50% {
+        transform: translatey(-20%);
+    }
 }
 
 /* Seção sobre */
